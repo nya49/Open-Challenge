@@ -1,0 +1,7 @@
+body { background-color: aliceblue;}
+p { font-family: "휴먼편지체"; font-size: 1em; text-indent: 1em;}
+h1 { color: brown; text-align: center;}
+table { background: #FFA7A7; margin-left: 10px; padding-left: 10px; padding-right: 10px;}
+th { text-align: left; color: darkblue;}
+td { font-family: "휴먼편지체"; font-size: 1em; text-indent: 1em;}
+footer { background: orange; border-radius: 10px;}

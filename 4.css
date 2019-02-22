@@ -1,0 +1,9 @@
+body { background-color: aliceblue;}
+p { font-family: "휴먼편지체"; font-size: 1em; text-indent: 1em;}
+h1 { color: brown; text-align: center;}
+h2 { color: blue;}
+h2.blurText { text-shadow: 3px 3px 5px skyblue;}
+ul { border: 1px dotted black;}
+a:link { text-decoration: none; }
+a:visited { color: blue;}
+footer { background: orange; border-radius: 10px;}
