@@ -1,2 +1,1 @@
 # Open-Challenge
-## Open Challenge
