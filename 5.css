@@ -1,0 +1,8 @@
+html, body { margin: 0; padding: 0; height: 100%}
+header { background: yellow; width: 100%;}
+nav { float: left; width: 150px; background: orange; height: 100%; position: absolute;}
+section { float: left; height:auto; width: 100%; background: #3DB7CC; padding-left: 160px;}
+h1 { text-align: center;}
+h2 { color: blue;}
+h2.blurText { text-shadow: 3px 3px 5px skyblue;}
+footer { background: plum; clear: both; width: 100%;}

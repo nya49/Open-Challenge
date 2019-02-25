@@ -1,0 +1,7 @@
+html, body { margin: 0; padding: 0; height: 100%}
+header { background: yellow; width: 100%;}
+h1 { text-align: center;}
+table { background: pink; width: 100%; margin: 10px; }
+th { float: left;}
+td { float: left;}
+footer { background: plum; clear: both;}
