@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>별문자 출력하기</title>
+  <script>
+    function star(n) {
+      var m = parseInt(n);
+        if(isNaN(m)){
+          document.write("입력 오류 입니다.");
+        }
+        for(var i=1; i<=m; i++){
+          for( k=1; k<=i; k++){
+            document.write("*");
+          }
+        document.write("<br />");
+      }
+      for(i=m; i>=1; i--){
+        for( k=i; k<m; k++){
+          document.write("&nbsp;");
+        }
+        for( k=1; k<=i; k++){
+          document.write("*");
+        }
+      document.write("<br />");
+    }
+    }
+  </script>
+</head>
+<body>
+  <h3>별문자 출력하기</h3>
+  <hr>
+  <script>
+    var n = prompt("정수를 입력하세요.", "");
+    star(n);
+  </script>
+</body>
+</html>
