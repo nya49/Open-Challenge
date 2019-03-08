@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>회원가입</title>
+  <style media="screen">
+    form { width: 100%;}
+    table { border: 2px solid #990085; padding: 10px; }
+    th { float: left; padding: 15px; }
+    td { padding-right: 100px;}
+    span { color : gray; font-size: 12px;}
+  </style>
+  <script>
+    function vali(){
+      var id = document.getElementById("id");
+      if(!chk(/^[a-z][a-z\d]{3,11}$/, id, "잘못된 형식의 ID입니다."));
+      if(!chk(/[\d]/, id, "잘못된 형식의 ID입니다."));
+
+      var pw = document.getElementById("pw");
+      if(!chk(/([a-zA-Z0-9].*[!,@,#,$,%,^,&,*,?,_,~,-])|([!,@,#,$,%,^,&,*,?,_,~,-].*[a-zA-Z0-9]){8,16}$/, pw, "잘못된 형식의 PW입니다.")) return false;
+
+      var pws = document.getElementById("pws");
+      if(!chk(/([a-zA-Z0-9].*[!,@,#,$,%,^,&,*,?,_,~,-])|([!,@,#,$,%,^,&,*,?,_,~,-].*[a-zA-Z0-9])/, pws, "잘못된 형식의 PW입니다.")) return false;
+
+      if(pw.value != pws.value){
+         alert("패스워드가 다릅니다.");
+         return false;
+      }
+
+      var email = document.getElementById("email");
+      if(!chk(/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/, email,
+          "이메일 형식이 잘못되었습니다.")) return false;
+
+      var phone = document.getElementById("phone");
+      if(!chk(/^\d{3}-\d{3,4}-\d{4}$/, phone, "휴대폰번호 형식이 잘못되었습니다.")) return false;
+      alert("전부 입력하셨습니다.");
+    }
+
+    function chk(re, e, msg){
+      if(re.test(e.value)) return true;
+        alert(msg);
+      e.focus();
+      return false;
+      }
+
+  function pwchk(e1, e2, msg){
+    if(e1 == e2) return true;
+      alert(msg);
+    e.focus();
+    return false;
+  }
+  </script>
+</head>
+<body>
+  <h3>회원가입</h3>
+  <hr>
+  <form method="post" onsubmit="vali();">
+  <table>
+    <tr>
+      <th>아이디</th>
+      <td><input id="id" type="text" placeholder="asdf123"></td>
+    </tr>
+    <tr>
+      <th>패스워드</th>
+      <td><input id="pw" name="pw" type="password" placeholder="8~16자, qwer1234!"></td>
+    </tr>
+    <tr>
+      <th>패스워드 확인</th>
+      <td><input id="pws" name="pw" type="password" placeholder="8~16자, qwer1234!"></td>
+    </tr>
+    <tr>
+      <th>e-mail</th>
+      <td><input id="email" name="email" type="text" placeholder="wer@naver.com"></td>
+    </tr>
+    <tr>
+      <th>휴대폰</th>
+      <td><input id="phone" name="phone" type="text" placeholder="010-1234-5678"></td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center; height:30px; padding-left:80px;"><input type="submit" value="유효성 확인"></td>
+    </tr>
+  </table>
+  </form>
+</body>
+</html>
